@@ -79,6 +79,9 @@ module.exports = {
       backgroundSize: {
         full: "100%",
       },
+      fontFamily: {
+        poppins: ['Poppins', 'sans-serif'],
+      },
     },
   },
   variants: [

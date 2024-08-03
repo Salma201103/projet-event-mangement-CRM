@@ -43,6 +43,9 @@ export default function Register() {
                 <div className="text-blueGray-400 text-center mb-3 font-bold">
                   <small>Or sign up with credentials</small>
                 </div>
+                
+                
+                
                 <form>
                   <div className="relative w-full mb-3">
                     <label
