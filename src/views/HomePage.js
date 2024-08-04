@@ -1,6 +1,6 @@
 import React from "react";
 // import { Link } from "react-router-dom";
-
+import "../assets/styles/style.css"
 // components
 
 // import Navbar from "components/Navbars/AuthNavbar.js";
@@ -78,8 +78,8 @@ export default function HomePage() {
             {/* </div> */}
 
             {/* <div className="container mx-auto my-10"> */}
-            <div className="flex  mb-3 mt-24 ml-3">
-              <h1 className="text-4xl font-bold text-blue-700 mr-auto">
+            <div className="flex  mb-3 mt-24  ">
+              <h1 className="title-text text-4xl font-bold text-blue-700 mr-auto">
                 Upcoming Events
               </h1>
             </div>
@@ -89,9 +89,15 @@ export default function HomePage() {
             </div>
             {/* </div> */}
           </div>
-          <div className="flex flex-wrap justify-center"><CardEventTypes/></div>
+          <div className="flex  mb-3 mt-24 ">
+            <h1 className="title-right text-4xl font-bold text-blue-700 mr-auto ml-8">
+              Events Based on Categories
+            </h1>
+          </div>
+          <div className="flex flex-wrap justify-center">
+            <CardEventTypes />
+          </div>
         </section>
-        
       </main>
       <Footer />
     </>
