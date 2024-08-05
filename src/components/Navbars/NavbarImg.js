@@ -1,7 +1,7 @@
-/*eslint-disable*/
+/* eslint-disable */
 import React from "react";
 import { Link } from "react-router-dom";
-import "../../assets/styles/style.css";
+import "../../assets/styles/style.css"; // Ensure the path is correct
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -74,12 +74,15 @@ export default function Navbar(props) {
                   className="text-white text-sm font-bold leading-relaxed inline-block mr-4 py-2 whitespace-nowrap uppercase"
                   to="/authen"
                 >
-                  <button
+                  <div className="wrapper">
+                    <a href="#">Sign In</a>
+                  </div>
+                  {/* <button
                     className="bg-purple-500 text-white active:bg-purple-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                     type="button"
                   >
                     Sign In
-                  </button>
+                  </button> */}
                 </Link>
               </li>
             </ul>

@@ -1,3 +1,5 @@
+// axios houa l wijh mta3 l front ye9bel w yab3eth 
+
 import axios from 'axios';
 
 // njibou tri9=serveur mta3 l backend (win l blasa li ta3ti e reponse):
@@ -12,3 +14,5 @@ export async function getAllUsers(){
 export async function deleteUser(id){ 
     return await axios.delete(`${apiUrl}/deleteUser/${id}`) // instead of axios.get(`http://localhost:5000/users/users`) bch ken tbadel l url matsirich mochkla 
 }
+
+// Async await: bch ki tabda 7aja feha wa9t yimchi yi5dem l7ajet lo5rin madem hiya tcharjet

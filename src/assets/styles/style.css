@@ -823,3 +823,71 @@
   margin-left: 140px; /* Adjust this value as needed */
   margin-bottom: 20px;
 }
+
+/* ***********THE SIGN IN BUTTON*********** */
+.wrapper {
+  position: relative;
+  display: inline-block; /* Ensure wrapper does not take full width */
+}
+
+.wrapper a {
+  display: block;
+  width: 150px; /* Reduced width */
+  height: 40px; /* Reduced height */
+  line-height: 38px; /* Adjusted line-height */
+  text-decoration: none;
+  text-align: center;
+  border-radius: 20px; /* Adjusted border-radius */
+  border: 2px solid #3bcef6; /* Adjusted border width */
+  color: #3bcef6;
+  font-size: 16px; /* Reduced font size */
+  font-family: Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  background: transparent;
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
+
+.wrapper a:before,
+.wrapper a:after {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: -100%;
+  left: 0;
+  background: #3bcef6;
+  z-index: -1;
+  transition: all 0.35s;
+  box-sizing: border-box;
+}
+
+.wrapper a:before {
+  opacity: 0.5;
+}
+
+.wrapper a:after {
+  transition-delay: 0.2s;
+}
+
+.wrapper a:hover {
+  color: #fff;
+}
+
+.wrapper a:hover:before,
+.wrapper a:hover:after {
+  top: 0;
+}
+
+.wrapper a:active {
+  background-color: #3bcef6;
+  border-color: #3bcef6;
+  color: #fff;
+}
+
+.wrapper a:active:before,
+.wrapper a:active:after {
+  top: 0;
+}
+
