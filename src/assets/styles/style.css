@@ -830,7 +830,7 @@
   display: inline-block; /* Ensure wrapper does not take full width */
 }
 
-.wrapper a {
+.wrapper button {
   display: block;
   width: 150px; /* Reduced width */
   height: 40px; /* Reduced height */
@@ -849,8 +849,8 @@
   box-sizing: border-box;
 }
 
-.wrapper a:before,
-.wrapper a:after {
+.wrapper button:before,
+.wrapper button:after {
   position: absolute;
   content: "";
   width: 100%;
@@ -863,31 +863,123 @@
   box-sizing: border-box;
 }
 
-.wrapper a:before {
+.wrapper button:before {
   opacity: 0.5;
 }
 
-.wrapper a:after {
+.wrapper button:after {
   transition-delay: 0.2s;
 }
 
-.wrapper a:hover {
+.wrapper button:hover {
   color: #fff;
 }
 
-.wrapper a:hover:before,
-.wrapper a:hover:after {
+.wrapper button:hover:before,
+.wrapper button:hover:after {
   top: 0;
 }
 
-.wrapper a:active {
+.wrapper button:active {
   background-color: #3bcef6;
   border-color: #3bcef6;
   color: #fff;
 }
 
-.wrapper a:active:before,
-.wrapper a:active:after {
+.wrapper button:active:before,
+.wrapper button:active:after {
   top: 0;
 }
 
+/* title animations  */
+/* Define the animation keyframes */
+@keyframes fadeInSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply the animation to the title */
+.title-animate {
+  animation: fadeInSlideUp 1s ease-out;
+  font-size: 28px; /* Adjust font size for navbar */
+  text-transform: uppercase;
+  font-weight: 700;
+  font-family: "cursive", serif;
+  background: linear-gradient(to right, #04c4f9 10%, #142d87 50%, #a457d7 60%);
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 1.5s linear infinite;
+  display: inline-block;
+}
+@keyframes textclip {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* CARDBOOK  */
+.card-book {
+  display: flex;
+  flex-direction: row;
+  width: 32rem; /* Wider width for better image display */
+  height: 13rem; /* Adjusted height for a more balanced look */
+  margin: 10px;
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.card-image {
+  flex: 2; /* Increase flex ratio to give more space to the image */
+  max-width: 50%; /* Limit the maximum width of the image container */
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-content {
+  flex: 1; /* Adjust flex ratio to accommodate the increased image space */
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+}
+
+.book-btn {
+  background-color: #3490dc;
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.fav-button {
+  background-color: transparent;
+  color: #3490dc;
+  border: 1px solid #3490dc;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+ 
